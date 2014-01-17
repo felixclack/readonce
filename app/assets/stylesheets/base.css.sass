@@ -1,0 +1,60 @@
+@import "bootstrap"
+@import "compass"
+
+$body-copy: #333
+$faded: #99B2B7
+$subtle: #D5DED9
+
+%standard-width-col
+  @extend .col-md-6
+  @extend .col-md-offset-3
+
+#messages
+  @extend .row
+    
+  h1
+    @extend %standard-width-col
+    
+.message
+  @extend %standard-width-col
+  border-bottom: 1px dotted $subtle
+  padding-bottom: 2rem
+  padding-top: 2rem
+  position: relative
+
+  &.read
+    .message-excerpt
+      color: $faded
+      text-decoration: line-through
+
+.message-excerpt
+  display: block
+  font-size: 2rem
+    
+  a
+    color: $body-copy
+    
+    &:hover
+      text-decoration: none
+
+.message-sender
+  color: $faded
+  font-weight: bold
+    
+time
+  color: $subtle
+  position: absolute
+  right: 0
+
+    
+#message-single
+  @extend %standard-width-col
+  margin-top: 6rem
+  
+  header
+    font-size: 3rem
+    margin-bottom: 3rem
+            
+  p
+    font-size: 2rem
+    line-height: 1.5

@@ -1,0 +1,24 @@
+<div class='container'>
+  <div id='messages'>
+    <h1>Messages</h1>
+    <% 2.times do %>
+      <div class='message'>
+        <span class='message-sender'>Ben</span>
+        <time>5 minutes ago</time>
+        <span class='message-excerpt'><%= link_to "Hey. I saw this and thought you'd find it funny...", mockup_path %></span>
+      </div>
+    <% end %>
+    <div class='message read'>
+      <span class='message-sender'>Ben</span>
+      <time>5 minutes ago</time>
+      <span class='message-excerpt'>Hey. I saw this and thought you'd find it funny...</span>
+    </div>
+    <% 5.times do %>
+      <div class='message'>
+        <span class='message-sender'>Ben</span>
+        <time>5 minutes ago</time>
+        <span class='message-excerpt'><%= link_to "Hey. I saw this and thought you'd find it funny...", mockup_path %></span>
+      </div>
+    <% end %>
+  </div>
+</div>
