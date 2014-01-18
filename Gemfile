@@ -12,6 +12,9 @@ gem 'bootstrap-sass'
 gem 'compass-rails'
 gem 'devise'
 
+group :test do
+  gem 'rspec-rails'
+end
 group :doc do
   gem 'sdoc', require: false
 end
