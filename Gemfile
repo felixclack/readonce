@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'compass-rails'
+gem 'devise'
 
 group :doc do
   gem 'sdoc', require: false
