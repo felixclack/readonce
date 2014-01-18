@@ -14,6 +14,7 @@ gem 'devise'
 
 group :test do
   gem 'rspec-rails'
+  gem 'capybara-webkit'
 end
 group :doc do
   gem 'sdoc', require: false
