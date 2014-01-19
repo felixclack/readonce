@@ -15,6 +15,6 @@
   <%= f.label :body %>
   <%= f.text_area :body %>
   <%= f.label :receiver_id, 'Receiver' %>
-  <%= f.collection_select :receiver_id, receivers, :id, :email %>
+<%= f.collection_select :receiver_id, receivers, :id, :email, include_blank: true %>
   <%= f.submit 'Send' %>
 <% end %>
