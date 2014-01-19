@@ -18,6 +18,9 @@ build:
 
         # A step that prepares the database.yml using the database in services
         - rails-database-yml
+        - script:
+            name: Prepare DB
+            code: bundle exec rake db:create db:test:prepare
 
         # Add more steps here:
         - script:
