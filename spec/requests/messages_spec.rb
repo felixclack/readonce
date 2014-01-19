@@ -20,6 +20,15 @@ describe "Messages" do
         page.should have_content "can't be blank"
       end
     end
+    
+    context 'without specifying a receiver' do
+      it 'displays an error' do
+        visit new_message_path
+        fill_in :message_body, with: 'Test'
+        click_button 'Send'
+        page.should have_content "Receiver can't be blank"
+      end 
+    end
   end
   
   describe "viewing a list of messages", type: :feature do
@@ -41,6 +50,6 @@ describe "Messages" do
     fill_in :user_password, with: 'password'
     fill_in :user_password_confirmation, with: 'password'
     click_button 'Sign up'
-    end
-  end
+   end
+ end
     
