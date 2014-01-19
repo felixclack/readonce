@@ -17,7 +17,16 @@ describe "Messages" do
       it 'displays an error' do
         visit new_message_path
         click_button 'Send'
-        page.should have_content "can't be blank"
+        page.should have_content "Body can't be blank"
+      end
+    end
+    
+    context 'without specifying a receiver' do
+      it 'displays an error' do
+        visit new_message_path
+        fill_in :message_body, with: 'Test'
+        click_button 'Send'
+        page.should have_content "Receiver can't be blank"
       end
     end
   end
@@ -42,5 +51,4 @@ describe "Messages" do
     fill_in :user_password_confirmation, with: 'password'
     click_button 'Sign up'
   end
-
 end
