@@ -1,5 +1,14 @@
-<% messages.each do |message| %>
-  <div class='message'>
-    <%= message.body %>
+<div class='container'>
+  <div id='messages'>
+    <h1>Messages</h1>
+
+    <% messages.each do |message| %>
+      <div class='message'>
+        <span class='message-sender'><%= message.sender.email %></span>
+        <time><%= time_ago_in_words message.created_at %></time>
+        <span class='message-excerpt'><%= link_to truncate(message.body), message_path(message) %></span>
+      </div>
+    <% end %>
+    
   </div>
-<% end %>
+</div>
